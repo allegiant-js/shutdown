@@ -4,7 +4,7 @@
 >> There be 🐲 here! The API and functionality are being cemented, anything before a 1.0.0 release is subject to change.
 
 ```js
-const Shutdown = require('../index');
+const Shutdown = require('@allegiant/shutdown');
 
 var live=false;
 
