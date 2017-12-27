@@ -1,0 +1,30 @@
+{
+    "name": "@allegiant/shutdown",
+    "version": "0.2.1",
+    "description": "Simple graceful shutdown helper library.",
+    "author": "echopoint <echopoint@tutanota.com>",
+    "contributors": [],
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/allegiant-js/shutdown/issues"
+    },
+    "homepage": "https://github.com/allegiant-js/shutdown#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/allegiant-js/shutdown.git"
+    },
+    "main": "index.js",
+    "engine": {
+        "node": ">= 6"
+    },
+    "scripts": {
+        "lint": "eslint index.js",
+        "test": "tape test/*.js",
+        "coverage": "tape test/*.js --coverage --coverage-report=lcov"
+    },
+    "devDependencies": {
+        "eslint": "^4.12.1",
+        "jsdoc": "^3.5.5",
+        "tape": "^4.8.0"
+    }
+}
