@@ -3,6 +3,14 @@
 > Simple graceful shutdown helper library.
 >> There be 🐲 here! The API and functionality are being cemented, anything before a 1.0.0 release is subject to change.
 
+## Installation
+
+```
+npm install @allegiant/shutdown --save
+```
+
+## Usage
+
 ```js
 const Shutdown = require('@allegiant/shutdown');
 
