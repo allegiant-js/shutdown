@@ -3,6 +3,10 @@
 > Simple graceful shutdown helper library.
 >> There be 🐲 here! The API and functionality are being cemented, anything before a 1.0.0 release is subject to change.
 
+[![Npm Version](https://img.shields.io/npm/v/@allegiant/shutdown.svg)](https://www.npmjs.com/package/@allegiant/shutdown)
+[![Build Status](https://travis-ci.org/allegiant-js/shutdown.svg?branch=master)](https://travis-ci.org/allegiant-js/shutdown.svg?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/allegiant-js/shutdown/badge.svg?branch=master)](https://coveralls.io/github/allegiant-js/shutdown?branch=master)
+
 ## Installation
 
 ```
