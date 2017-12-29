@@ -52,7 +52,7 @@ if (typeof process.shutdown === 'undefined') {
        If the platform isn't windows, this won't do anything. On Windows 10 this behavior varies as to if it's needed.
     */
     if (process.platform.slice(0,3) == 'win') {
-        var read = require('readline').createInterface({
+        require('readline').createInterface({
             input: process.stdin,
             output: process.stdout
         }).on("SIGINT", function () {
