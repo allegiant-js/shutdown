@@ -8,6 +8,7 @@ function finished() {
     process.removeListener('exit', exitHandler);
     process.removeListener('SIGINT', sigintHandler);
     process.removeListener('uncaughtException', uncaughtExceptionHandler);
+    process.removeListener('unhandledRejection', unhandledPromiseRejectionHandler);
     process.emit('finished');
     process.exit();
 }
@@ -31,6 +32,10 @@ function uncaughtExceptionHandler(e) {
     shutdown(99);
 }
 
+function unhandledPromiseRejectionHandler(e, p) {
+    console.log('Unhandled Rejection at: Promise', p, 'Reason:', e, e.stack); // eslint-disable-line
+}
+
 function install(callback) {
     if (typeof callback !== 'function')
         throw new Error("Shutdown: callbacks must be functions");
@@ -42,6 +47,7 @@ if (typeof process.shutdown === 'undefined') {
     process.on('exit', exitHandler);
     process.on('SIGINT', sigintHandler);
     process.on('uncaughtException', uncaughtExceptionHandler);
+    process.on('unhandledRejection', unhandledPromiseRejectionHandler);
     process.shutdown = function(err=false) {
         shutdown(err);
     };
